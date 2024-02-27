@@ -4,6 +4,13 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import FooterLogoLine from "./components/FooterLogoLine";
 import { Providers } from "./providers";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Great Idea Development",
+  description: "A webapp is as a webapp does.",
+};
+
 
 const inter = Inter({ subsets: ["latin"] });
 
