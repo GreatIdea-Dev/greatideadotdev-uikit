@@ -60,14 +60,13 @@ export default function ColorThemePicker() {
         resolvedTheme.includes(Object.keys(color)[0]) &&
           setAccent(Object.keys(color)[0]);
       });
+      console.log(accent, background);
     }
+
     setMounted(true);
   }, [resolvedTheme]);
 
   useEffect(() => {
-    console.log("background", background);
-    console.log("accent", accent);
-    console.log(background + accent);
     const newTheme = background + accent;
     setTheme(newTheme);
   }, [accent, background]);
@@ -81,14 +80,21 @@ export default function ColorThemePicker() {
         {mounted && resolvedTheme?.includes("light") ? <Sun /> : <Moon />}
       </button>
       {showDropDown && mounted && (
-        <div className="bg-bkg outline-lines absolute -right-12 top-8 w-48 rounded-2xl p-2 outline">
+        <div className="bg-bkg outline-lines absolute -right-12 top-8 w-56 rounded-2xl p-2 outline">
           <div className="border-lines flex w-full flex-row  flex-wrap items-center justify-center border-b p-2">
             {backgrounds.map((background) => (
               <button
                 key={Math.random()}
-                className={`outline-lines m-1 h-4 w-4 rounded-full outline outline-2 ${Object.values(background)[0]}`}
+                className={
+                  resolvedTheme?.includes(Object.keys(background)[0])
+                    ? `outline-accent m-1 h-6 w-6 animate-pulse rounded-full outline outline-2 ${Object.values(background)[0]}`
+                    : `outline-lines m-1 h-6 w-6 rounded-full outline outline-2 ${Object.values(background)[0]}`
+                }
                 onClick={() => {
                   setBackground(Object.keys(background)[0].toString());
+                  setTimeout(() => {
+                    setShowDropDown(false);
+                  }, 500);
                 }}
               />
             ))}
@@ -97,9 +103,16 @@ export default function ColorThemePicker() {
             {colors.map((color) => (
               <button
                 key={Math.random()}
-                className={`outline-lines m-1 h-4 w-4 rounded-full outline outline-2 ${Object.values(color)[0]}`}
+                className={
+                  resolvedTheme?.includes(Object.keys(color)[0])
+                    ? ` outline-txt-main m-1 h-6 w-6 animate-pulse rounded-full outline outline-2 ${Object.values(color)[0]}`
+                    : `outline-lines m-1 h-6 w-6 rounded-full outline outline-2 ${Object.values(color)[0]}`
+                }
                 onClick={() => {
                   setAccent(Object.keys(color)[0].toString());
+                  setTimeout(() => {
+                    setShowDropDown(false);
+                  }, 500);
                 }}
               />
             ))}
