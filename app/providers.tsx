@@ -108,10 +108,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
     "darkStonePink",
     "darkStoneRose",
   ];
+
+  const randomTheme = themeList[Math.floor(Math.random() * themeList.length)];
   return (
     <ThemeProvider
       themes={themeList}
       attribute="data-theme"
+      defaultTheme={randomTheme}
       enableSystem={false}
     >
       {children}
