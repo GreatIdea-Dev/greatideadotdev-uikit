@@ -787,7 +787,7 @@ main {
 }
 
 h1 {
-   @apply text-6xl font-bold text-accent;
+   @apply text-6xl font-bold;
 }
 
 p {
