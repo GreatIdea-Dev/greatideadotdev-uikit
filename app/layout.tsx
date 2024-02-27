@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import FooterLogoLine from "./components/FooterLogoLine";
 import { Providers } from "./providers";
 import { Metadata } from "next";
+import { useRef, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Great Idea Development",

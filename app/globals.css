@@ -744,6 +744,11 @@
   }
 }
 
+.mouseEffect {
+  background: radial-gradient(300px circle at var(--positionx) var(--positiony), var(--highlightColor), var(--baseColor));
+  @apply bg-clip-text text-transparent h-16;
+}
+
 body {
   @apply flex flex-col items-center justify-between w-screen min-h-screen;
   @apply bg-bkg;
@@ -773,7 +778,7 @@ nav {
 }
 
 .headerNav a {
-    @apply text-sm font-medium;
+    @apply text-sm font-semibold;
     @apply text-txt-main hover:text-accent;
 }
 
@@ -782,7 +787,7 @@ nav {
 }
 
 main {
-   @apply flex flex-col items-center justify-center gap-4;
+   @apply flex w-full flex-col items-center justify-center gap-4;
    @apply flex-1 p-24;
 }
 
