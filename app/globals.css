@@ -2,7 +2,230 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+      --color-txt-main: 0deg 0% 90%;
+      --color-txt-accent: 0deg 0% 70%;
+      --color-accent: 188deg 86% 53%;
+      --color-lines: 0deg 0% 15%;
+      --color-bkg: 0deg 0% 9%;
+    }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-txt-main: 0deg 0% 15%;
+      --color-txt-accent: 0deg 0% 45%;
+      --color-accent: 188deg 86% 53%;
+      --color-lines: 0deg 0% 83%;
+      --color-bkg: 0deg 0% 96%;
+    }
+  }
+  :root[data-theme='dark'] {
+    --color-txt-main: 0deg 0% 90%;
+    --color-txt-accent: 0deg 0% 70%;
+    --color-accent: 188deg 86% 53%;
+    --color-lines: 0deg 0% 15%;
+    --color-bkg: 0deg 0% 9%;
+  }
+  :root[data-theme='light'] {
+    --color-txt-main: 0deg 0% 15%;
+    --color-txt-accent: 0deg 0% 45%;
+    --color-accent: 188deg 86% 53%;
+    --color-lines: 0deg 0% 83%;
+    --color-bkg: 0deg 0% 96%;
+  }
+  :root[data-color-scheme='red'] {
+    --color-accent: 0deg 84% 60%;
+  }
+  :root[data-color-scheme='orange'] {
+    --color-accent: 25deg 95% 53%;
+  }
+  :root[data-color-scheme='amber'] {
+    --color-accent: 38deg 92% 50%;
+  }
+  :root[data-color-scheme='yellow'] {
+    --color-accent: 45deg 93% 47%;
+  }
+  :root[data-color-scheme='lime'] {
+    --color-accent: 83deg 78% 55%;
+  }
+  :root[data-color-scheme='green'] {
+    --color-accent: 142deg 71% 45%;
+  }
+  :root[data-color-scheme='emerald'] {
+    --color-accent: 158deg 64% 52%;
+  }
+  :root[data-color-scheme='teal'] {
+    --color-accent: 173deg 80% 40%;
+  }
+  :root[data-color-scheme='cyan'] {
+    --color-accent: 188deg 86% 53%;
+  }
+  :root[data-color-scheme='sky'] {
+    --color-accent: 199deg 89% 48%;
+  }
+  :root[data-color-scheme='blue'] {
+    --color-accent: 217deg 91% 60%;
+  }
+  :root[data-color-scheme='indigo'] {
+    --color-accent: 239deg 84% 67%;
+  }
+  :root[data-color-scheme='violet'] {
+    --color-accent: 258deg 90% 66%;
+  }
+  :root[data-color-scheme='purple'] {
+    --color-accent: 271deg 91% 65%;
+  }
+  :root[data-color-scheme='fuchsia'] {
+    --color-accent: 292deg 84% 61%;
+  }
+  :root[data-color-scheme='pink'] {
+    --color-accent: 329deg 86% 70%;
+  }
+  :root[data-color-scheme='rose'] {
+    --color-accent: 350deg 89% 60%;
+  }
+  :root[data-bg-scheme='neutral'] {
+    --color-txt-main: 0deg 0% 90%;
+    --color-txt-accent: 0deg 0% 83%;
+    --color-lines: 0deg 0% 15%;
+    --color-bkg: 0deg 0% 9%;
+  }
+  :root[data-bg-scheme='slate'] {
+    --color-txt-main: 214deg 32% 91%;
+    --color-txt-accent: 213deg 27% 84%;
+    --color-lines: 217deg 33% 17%;
+    --color-bkg: 222deg 47% 11%;
+  }
+  :root[data-bg-scheme='gray'] {
+    --color-txt-main: 220deg 13% 91%;
+    --color-txt-accent: 216deg 12% 84%;
+    --color-lines: 215deg 28% 17%;
+    --color-bkg: 221deg 39% 11%;
+  }
+  :root[data-bg-scheme='zinc'] {
+    --color-txt-main: 240deg 6% 90%;
+    --color-txt-accent: 240deg 5% 84%;
+    --color-lines: 240deg 4% 16%;
+    --color-bkg: 240deg 6% 10%;
+  }
+  :root[data-bg-scheme='stone'] {
+    --color-txt-main: 20deg 6% 90%;
+    --color-txt-accent: 24deg 6% 83%;
+    --color-lines: 12deg 6% 15%;
+    --color-bkg: 24deg 10% 10%;
+  }
+}
+
 body {
-  @apply dark:bg-neutral-900 bg-neutral-100;
-  @apply dark:text-neutral-200 text-neutral-600;
+  @apply flex flex-col items-center justify-between w-screen min-h-screen;
+  @apply bg-bkg;
+  @apply text-txt-main;
+}
+
+header {
+    @apply flex items-center justify-center;
+    @apply border-b border-lines;
+    @apply h-16 w-full;
+    @apply px-8;
+}
+
+nav {
+    @apply flex flex-row items-center justify-between;
+    @apply w-full;
+}
+
+.headerNav {
+    @apply flex items-center justify-center self-center;
+    @apply flex-1;
+    @apply gap-8;
+}
+
+.headerNav li {
+    @apply flex;
+}
+
+.headerNav a {
+    @apply text-sm font-medium;
+    @apply text-txt-main hover:text-accent;
+}
+
+.logoColor {
+    @apply text-accent;
+}
+
+main {
+   @apply flex flex-col items-center justify-center gap-4;
+   @apply flex-1 p-24;
+}
+
+h1 {
+   @apply text-6xl font-bold;
+}
+
+p {
+    @apply text-lg;
+}
+
+.navLogoContainer {
+    @apply flex items-center justify-center;
+    @apply w-24;
+}
+
+.navIconContainer {
+    @apply flex items-center justify-center;
+    @apply hover:text-accent;
+    @apply text-txt-main;
+    @apply w-24;
+}
+
+.navIcon {
+    @apply h-6 w-6;
+    @apply hover:text-accent;
+    @apply text-txt-main;
+    @apply cursor-pointer;
+}
+
+footer {
+    @apply mx-auto flex-col gap-3.5 px-4 max-w-7xl py-9 flex;
+}
+
+.footerLogoLine {
+  @apply w-screen h-px bg-lines flex items-center justify-center;
+}
+
+.footerLogo {
+  @apply bg-bkg p-4;
+}
+
+.footerIcons {
+    @apply flex flex-row justify-center items-center;
+    @apply gap-4;
+}
+
+.footerIcon {
+    @apply h-6 w-6;
+    @apply text-txt-main;
+    @apply hover:text-accent;
+    @apply cursor-pointer;
+}
+
+.footerNav {
+    @apply flex flex-row items-center justify-center;
+    @apply gap-4;
+}
+
+.footerNav li {
+    @apply flex;
+}
+
+.footerNav a {
+    @apply text-sm font-medium;
+    @apply text-txt-main hover:text-accent;
+}
+
+.copy {
+    @apply text-txt-accent;
+    @apply text-sm text-center;
+    @apply flex items-center justify-center;
+    @apply h-full w-full;
 }
