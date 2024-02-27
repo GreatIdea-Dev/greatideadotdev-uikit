@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navigation />
         {children}
-        <FooterLogoLine color="#22d3ee" />
+        <FooterLogoLine />
         <Footer />
       </body>
     </html>
