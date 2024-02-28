@@ -1,6 +1,6 @@
 # Great Idea Development
 
-Build with NextJS, TypeScript, and TailwindCSS
+Built with NextJS, TypeScript, and TailwindCSS
 
 ## Teh Stack and Features
 
