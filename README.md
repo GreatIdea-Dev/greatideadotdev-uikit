@@ -1,4 +1,6 @@
-# NextJS UI Playground/Test Area
+# Great Idea Development
+
+Built with NextJS, TypeScript, and TailwindCSS
 
 ## Teh Stack and Features
 
@@ -8,6 +10,7 @@
 - Multiple Themes and Color Schemes (user selectable)
 - Dark Mode
 - Light Mode
+- Hover/Spotlight Cursor Highlight Feature
 
 ## Planned Features
 
