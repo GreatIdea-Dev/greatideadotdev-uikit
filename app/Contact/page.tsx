@@ -5,7 +5,7 @@ import CursorSpotlightText from '../components/CursorSpotlight/CursorSpotlightTe
 export default function Contact() {
   return (
     <main>
-      <CursorSpotlightHeading>Welcome to the Home Page!</CursorSpotlightHeading>
+      <CursorSpotlightHeading>Welcome to the Contact Page!</CursorSpotlightHeading>
       <CursorSpotlightCard>
         <CursorSpotlightText>
           &ldquo;You&apos;ll need to drink all of this. Harry,&rdquo; she said. &ldquo;It&apos;s a
