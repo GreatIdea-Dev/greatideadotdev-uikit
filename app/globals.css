@@ -746,7 +746,19 @@
 
 .mouseEffect {
   background: radial-gradient(300px circle at var(--positionx) var(--positiony), var(--highlightColor), var(--baseColor));
-  @apply bg-clip-text text-transparent h-16;
+  @apply bg-clip-text text-transparent h-auto leading-tight;
+}
+
+.mouseEffectOuterContainer {
+  @apply flex flex-col items-center justify-center;
+  background: radial-gradient(300px circle at var(--positionx) var(--positiony), var(--highlightColor), var(--baseColor));
+  @apply bg-transparent outline outline-transparent -outline-offset-1  h-auto w-full bg-bkg rounded-2xl p-0.5;
+}
+
+.mouseEffectInnerContainer {
+  @apply flex flex-col items-center justify-center;
+  @apply bg-bkg rounded-2xl w-auto h-auto p-4;
+
 }
 
 body {
@@ -787,11 +799,13 @@ nav {
 }
 
 main {
-   @apply flex w-full flex-col items-center justify-center gap-4;
+   @apply flex w-full h-auto flex-col items-center justify-center gap-4;
    @apply flex-1 p-24;
+   @apply text-center;
 }
 
 h1 {
+  @apply flex flex-col items-center justify-center;
    @apply text-6xl font-bold text-accent;
 }
 

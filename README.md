@@ -10,12 +10,10 @@ Built with NextJS, TypeScript, and TailwindCSS
 - Multiple Themes and Color Schemes (user selectable)
 - Dark Mode
 - Light Mode
-- Cursor Spotlight feature for text and other accent elements
+- Cursor Spotlight feature for text and card container
 
 ## TODO: Plannned Features and Optimizations
 
-- [ ] Investigate making cursor-spotlight a reusable component
-- [ ] Add Card component
 - [ ] Implement Text Glow Class
 - [ ] Create Styled Forms
 - [ ] Create Projects page with cards for completed and in-progress projects

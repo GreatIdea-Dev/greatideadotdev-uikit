@@ -1,108 +1,33 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-"use client";
-import { useTheme } from "next-themes";
-import { useEffect, useRef, useState } from "react";
+import CursorSpotlightCard from '../components/CursorSpotlight/CursorSpotlightCard';
+import CursorSpotlightHeading from '../components/CursorSpotlight/CursorSpotlightHeading';
+import CursorSpotlightText from '../components/CursorSpotlight/CursorSpotlightText';
 
-interface IColorList {
-  [key: string]: string;
-}
-
-export default function Home() {
-  const { resolvedTheme } = useTheme();
-  const [baseColor, setBaseColor] = useState("#22d3ee");
-  const [highlightColor, setHighlightColor] = useState("#67e8f9");
-  const [mounted, setMounted] = useState(false);
-  const divRef = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!divRef.current) return;
-    const div = divRef.current;
-    const rect = div.getBoundingClientRect();
-
-    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
-
-  const highlightColors: IColorList[] = [
-    { Red: "#fca5a5" },
-    { Orange: "#fdba74" },
-    { Amber: "#fcd34d" },
-    { Yellow: "#fde047" },
-    { Lime: "#bef264" },
-    { Green: "#86efac" },
-    { Emerald: "#6ee7b7" },
-    { Teal: "#5eead4" },
-    { Cyan: "#67e8f9" },
-    { Sky: "#7dd3fc" },
-    { Blue: "#93c5fd" },
-    { Indigo: "#a5b4fc" },
-    { Violet: "#c4b5fd" },
-    { Purple: "#d8b4fe" },
-    { Fuchsia: "#f0abfc" },
-    { Pink: "#f9a8d4" },
-    { Rose: "#fda4af" },
-  ];
-  const baseColors: IColorList[] = [
-    { Red: "#ef4444" },
-    { Orange: "#f97316" },
-    { Amber: "#f59e0b" },
-    { Yellow: "#eab308" },
-    { Lime: "#84cc16" },
-    { Green: "#22c55e" },
-    { Emerald: "#10b981" },
-    { Teal: "#14b8a6" },
-    { Cyan: "#06b6d4" },
-    { Sky: "#0ea5e9" },
-    { Blue: "#3b82f6" },
-    { Indigo: "#6366f1" },
-    { Violet: "#8b5cf6" },
-    { Purple: "#a855f7" },
-    { Fuchsia: "#d946ef" },
-    { Pink: "#ec4899" },
-    { Rose: "#f43f5e" },
-  ];
-
-  useEffect(() => {
-    if (mounted && resolvedTheme) {
-      let newBaseColor = "#22d3ee";
-      baseColors.map((color) => {
-        if (resolvedTheme.includes(Object.keys(color)[0])) {
-          newBaseColor = Object.values(color)[0];
-        }
-      });
-      console.log(newBaseColor);
-
-      let newHighlightColor = "#67e8f9";
-      highlightColors.map((color) => {
-        if (resolvedTheme.includes(Object.keys(color)[0])) {
-          newHighlightColor = Object.values(color)[0];
-        }
-      });
-      console.log(newHighlightColor);
-      setBaseColor(newBaseColor);
-      setHighlightColor(newHighlightColor);
-    }
-    if (!mounted && resolvedTheme) {
-      setMounted(true);
-    }
-  }, [mounted, resolvedTheme]);
-
-  const style = {
-    "--positionx": `${position.x}px`,
-    "--positiony": `${position.y}px`,
-    "--baseColor": baseColor,
-    "--highlightColor": highlightColor,
-  } as React.CSSProperties;
+export default function About() {
   return (
     <main>
-      <h1
-        style={style}
-        ref={divRef}
-        onMouseMove={handleMouseMove}
-        className="mouseEffect"
-      >
-        This is the About page.
-      </h1>
-      <p>Get started by editing</p>
+      <CursorSpotlightHeading>Welcome to the About Page!</CursorSpotlightHeading>
+      <CursorSpotlightCard>
+        <CursorSpotlightText>
+          &ldquo;You&apos;ll need to drink all of this. Harry,&rdquo; she said. &ldquo;It&apos;s a
+          potion for dreamless sleep.&rdquo; Harry took the goblet and drank a few mouthfuls. He
+          felt himself becoming drowsy at once. Everything around him became hazy; the lamps around
+          the hospital wing seemed to be winking at him in a friendly way through the screen around
+          his bed; his body felt as though it was sinking deeper into the warmth of the feather
+          matress. Before he could finish the potion, before he could say another word, his
+          exhaustion had carried him off to sleep. Harry woke up, so warm, so very sleepy, that he
+          didn&apos;t open his eyes, wanting to drop off again.
+        </CursorSpotlightText>
+      </CursorSpotlightCard>
+      <CursorSpotlightCard>
+        <CursorSpotlightText>
+          &ldquo;You - er - look nice,&rdquo; he said awkwardly. &ldquo;Thanks,&rdquo; she said.
+          &ldquo;Padma&apos;s going to meet you in the entrance hall,&rdquo; she added to Ron.
+          &ldquo;Right,&rdquo; said Ron, looking around. &ldquo;Where&apos;s Hermione?&rdquo;
+          Parvati shrugged. &ldquo;Shall we go down then, Harry?&rdquo; &ldquo;Okay,&rdquo; said
+          Harry, wishing he could just stay in the common room. Fred winked at Harry as he passed
+          him on the way out of the portrait hole.
+        </CursorSpotlightText>
+      </CursorSpotlightCard>
     </main>
   );
 }
