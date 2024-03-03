@@ -28,23 +28,20 @@ export default function Navigation() {
   return (
     <header>
       <nav>
-        <div className="navLogoContainer logoColor">{logo}</div>
-        <ul className="headerNav">
+        <div className='navLogoContainer logoColor'>{logo}</div>
+        <ul className='headerNav'>
           <li>
-            <Link className="link" href="/">
-              Home
+            <Link href='https://github.com/W5DEV/' target='_blank'>
+              Github
             </Link>
           </li>
           <li>
-            <Link href="/About">About</Link>
-          </li>
-          <li>
-            <Link href="/Contact">Contact</Link>
+            <Link href='https://www.w5dev.com/' target='_blank'>
+              Portfolio
+            </Link>
           </li>
         </ul>
-        <div className="navIconContainer">
-          {mounted && <ColorThemePicker />}
-        </div>
+        <div className='navIconContainer'>{mounted && <ColorThemePicker />}</div>
       </nav>
     </header>
   );

@@ -12,29 +12,26 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="footer">
-        <div className="footerIcons">
+      <footer className='footer'>
+        <div className='footerIcons'>
           <Cake />
           <Beaker />
           <Ant />
           <Graduate />
         </div>
-        <ul className="footerNav">
+        <ul className='footerNav'>
           <li>
-            <Link className="link" href="/">
-              Home
+            <Link href='https://github.com/W5DEV/' target='_blank'>
+              Github
             </Link>
           </li>
           <li>
-            <Link href="/About">About</Link>
-          </li>
-          <li>
-            <Link href="/Contact">Contact</Link>
+            <Link href='https://www.w5dev.com/' target='_blank'>
+              Portfolio
+            </Link>
           </li>
         </ul>
-        <p className="copy">
-          &copy; 2024 Great Idea Development | All Rights Reserved
-        </p>
+        <p className='copy'>&copy; Great Idea Development {new Date().getFullYear()}</p>
       </footer>
     </>
   );

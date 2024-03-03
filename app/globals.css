@@ -757,7 +757,7 @@
 
 .mouseEffectInnerContainer {
   @apply flex flex-col items-center justify-center;
-  @apply bg-bkg rounded-2xl w-auto h-auto p-4;
+  @apply bg-bkg rounded-2xl w-full h-auto p-4;
 
 }
 
@@ -875,4 +875,53 @@ footer {
     @apply text-sm text-center;
     @apply flex items-center justify-center;
     @apply h-full w-full;
+}
+
+.formInputContainer {
+    @apply flex flex-col items-start justify-center py-2 w-full;
+    @apply gap-4;
+}
+
+.formInput {
+    @apply w-full h-12;
+    @apply bg-bkg;
+    @apply border-2 border-lines;
+    @apply rounded-md;
+    @apply px-4;
+    @apply text-txt-main;
+    @apply focus:outline-none;
+    @apply focus:border-accent;
+}
+
+.formSelect {
+    @apply w-full h-12;
+    @apply bg-bkg;
+    @apply border-2 border-lines;
+    @apply rounded-md;
+    @apply px-4;
+    @apply text-txt-main;
+    @apply focus:outline-none;
+    @apply focus:border-accent;
+}
+
+.formTextArea {
+    @apply w-full h-32;
+    @apply bg-bkg;
+    @apply border-2 border-lines;
+    @apply rounded-md;
+    @apply px-4;
+    @apply py-2;
+    @apply text-txt-main;
+    @apply focus:outline-none;
+    @apply focus:border-accent;
+}
+
+.formButton {
+    @apply w-full h-12;
+    @apply bg-bkg;
+    @apply rounded-md border-2 border-accent;
+    @apply text-txt-main;
+    @apply font-semibold;
+    @apply hover:bg-accent;
+    @apply focus:outline-none;
 }
