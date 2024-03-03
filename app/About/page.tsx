@@ -5,7 +5,7 @@ import CursorSpotlightText from './../components/CursorSpotlight/CursorSpotlight
 export default function About() {
   return (
     <main>
-      <CursorSpotlightHeading>Welcome to the Home Page!</CursorSpotlightHeading>
+      <CursorSpotlightHeading>Welcome to the About Page!</CursorSpotlightHeading>
       <CursorSpotlightCard>
         <p className='text-txt-main text-left'>
           &ldquo;You&apos;ll need to drink all of this, Harry,&rdquo; she said. &ldquo;It&apos;s a
