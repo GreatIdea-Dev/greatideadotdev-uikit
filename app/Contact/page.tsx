@@ -7,7 +7,7 @@ export default function Contact() {
     <main>
       <CursorSpotlightHeading>Welcome to the Home Page!</CursorSpotlightHeading>
       <CursorSpotlightCard>
-        <p className='text-txt-main'>
+        <p className='text-txt-main text-left'>
           &ldquo;You&apos;ll need to drink all of this, Harry,&rdquo; she said. &ldquo;It&apos;s a
           potion for dreamless sleep.&rdquo; Harry took the goblet and drank a few mouthfuls. He
           felt himself becoming drowsy at once. Everything around him became hazy; the lamps around
