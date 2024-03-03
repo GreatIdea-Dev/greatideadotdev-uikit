@@ -24,12 +24,13 @@ export default function Contact() {
     });
     const result = await response.json();
     if (result.success) {
-      window.alert(result);
+      console.log(result);
+      window.alert("Message Received! We'll be in touch soon!");
     }
   }
 
   return (
-    <div className='w-full h-full gap-8 p-16 flex flex-col justify-start items-center'>
+    <div className='w-full h-full gap-8 px-4 py-12 lg:px-16 lg:py-16 flex flex-col justify-start items-center max-w-4xl'>
       <div className='flex flex-col justify-start items-center w-full gap-5 px-4 text-center'>
         <CursorSpotlightHeading>Great Idea Development</CursorSpotlightHeading>
         <CursorSpotlightText>
@@ -39,7 +40,7 @@ export default function Contact() {
       <CursorSpotlightCard>
         <div className='w-full h-full'>
           <form
-            className='flex flex-col justify-center items-center w-full h-full p-16 gap-5'
+            className='flex flex-col justify-center items-center w-full h-full py-8 px-2 md:p-16 gap-5'
             onSubmit={handleSubmit}
           >
             <div className='formInputContainer'>
