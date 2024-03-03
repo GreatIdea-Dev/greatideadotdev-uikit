@@ -1,6 +1,6 @@
-import CursorSpotlightCard from './components/CursorSpotlight/CursorSpotlightCard';
-import CursorSpotlightHeading from './components/CursorSpotlight/CursorSpotlightHeading';
-import CursorSpotlightText from './components/CursorSpotlight/CursorSpotlightText';
+import CursorSpotlightCard from '../components/CursorSpotlight/CursorSpotlightCard';
+import CursorSpotlightHeading from '../components/CursorSpotlight/CursorSpotlightHeading';
+import CursorSpotlightText from '../components/CursorSpotlight/CursorSpotlightText';
 
 export default function Home() {
   return (
