@@ -800,13 +800,13 @@ nav {
 
 main {
    @apply flex w-full h-auto flex-col items-center justify-center gap-4;
-   @apply flex-1 p-24;
+   @apply flex-1 p-4 md:p-12 lg:p-24;
    @apply text-center;
 }
 
 h1 {
   @apply flex flex-col items-center justify-center;
-   @apply text-6xl font-bold text-accent;
+   @apply text-5xl lg:text-6xl font-bold text-accent;
 }
 
 p {
