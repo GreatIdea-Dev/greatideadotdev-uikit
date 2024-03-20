@@ -889,7 +889,7 @@ footer {
     @apply rounded-md;
     @apply px-4;
     @apply text-txt-main;
-    @apply focus:outline-none;
+    @apply focus:outline-none focus:ring-0 focus:ring-offset-0;
     @apply focus:border-accent;
 }
 
@@ -900,7 +900,7 @@ footer {
     @apply rounded-md;
     @apply px-4;
     @apply text-txt-main;
-    @apply focus:outline-none;
+    @apply focus:outline-none focus:ring-0 focus:ring-offset-0;
     @apply focus:border-accent;
 }
 
@@ -912,7 +912,7 @@ footer {
     @apply px-4;
     @apply py-2;
     @apply text-txt-main;
-    @apply focus:outline-none;
+    @apply focus:outline-none focus:ring-0 focus:ring-offset-0;
     @apply focus:border-accent;
 }
 
@@ -923,5 +923,5 @@ footer {
     @apply text-txt-main;
     @apply font-semibold;
     @apply hover:bg-accent;
-    @apply focus:outline-none;
+    @apply focus:outline-none focus:ring-0 focus:ring-offset-0;
 }
