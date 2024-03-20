@@ -1,13 +1,8 @@
-import Ant from "@/app/Icons/Ant";
-import Beaker from "@/app/Icons/Beaker";
-import Cake from "@/app/Icons/Cake";
-import Calculator from "@/app/Icons/Calculator";
-import Graduate from "@/app/Icons/Graduate";
-import LightBulb from "@/app/Icons/LightBulb";
-import Lightning from "@/app/Icons/Lightning";
-import Moon from "@/app/Icons/Moon";
-import Sun from "@/app/Icons/Sun";
-import Link from "next/link";
+import Ant from '@/app/Icons/Ant';
+import Beaker from '@/app/Icons/Beaker';
+import Cake from '@/app/Icons/Cake';
+import Graduate from '@/app/Icons/Graduate';
+import Link from 'next/link';
 
 export default function Footer() {
   return (

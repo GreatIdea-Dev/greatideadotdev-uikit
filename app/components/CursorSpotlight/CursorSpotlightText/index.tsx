@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 import { useTheme } from 'next-themes';
@@ -87,7 +88,6 @@ export default function CursorSpotlightText({
           newBaseColor = Object.values(color)[0];
         }
       });
-      console.log(newBaseColor);
 
       let newHighlightColor = '#67e8f9';
       highlightColors.map((color) => {
@@ -95,7 +95,6 @@ export default function CursorSpotlightText({
           newHighlightColor = Object.values(color)[0];
         }
       });
-      console.log(newHighlightColor);
       setBaseColor(newBaseColor);
       setHighlightColor(newHighlightColor);
     }

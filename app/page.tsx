@@ -1,9 +1,14 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 'use client';
+import { useRouter } from 'next/navigation';
 import CursorSpotlightCard from './components/CursorSpotlight/CursorSpotlightCard';
 import CursorSpotlightHeading from './components/CursorSpotlight/CursorSpotlightHeading';
 import CursorSpotlightText from './components/CursorSpotlight/CursorSpotlightText';
 
 export default function Contact() {
+  const router = useRouter();
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -24,8 +29,7 @@ export default function Contact() {
     });
     const result = await response.json();
     if (result.success) {
-      console.log(result);
-      window.alert("Message Received! We'll be in touch soon!");
+      router.push('/success');
     }
   }
 

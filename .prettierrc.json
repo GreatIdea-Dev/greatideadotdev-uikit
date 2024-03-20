@@ -17,5 +17,13 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": ["*.json", "*.jsx", "*.tsx"],
+      "options": {
+        "printWidth": 100
+      }
+    }
+  ]
 }
