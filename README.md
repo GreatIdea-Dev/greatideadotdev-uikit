@@ -2,7 +2,7 @@
 
 Built with NextJS, TypeScript, and TailwindCSS
 
-## Teh Stack and Features
+## Tech Stack and Features
 
 - NextJS
 - TypeScript
