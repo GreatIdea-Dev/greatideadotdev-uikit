@@ -65,9 +65,9 @@ export default function Contact() {
           Interested in partnering with us for your next project? We would love to hear from you!
         </CursorSpotlightText>
         <CursorSpotlightText>
-          If you are inquiring about Legends and Legacies, please select the 'Legends and Legacies'
-          option in the Project Type dropdown and let us know how we can best assist you with your
-          issue or question!
+          If you are inquiring about Legends and Legacies, please select the &quot;Legends and
+          Legacies&quot; option in the Project Type dropdown and let us know how we can best assist
+          you with your issue or question!
         </CursorSpotlightText>
       </div>
       <CursorSpotlightCard>
