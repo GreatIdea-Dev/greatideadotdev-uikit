@@ -64,6 +64,11 @@ export default function Contact() {
         <CursorSpotlightText>
           Interested in partnering with us for your next project? We would love to hear from you!
         </CursorSpotlightText>
+        <CursorSpotlightText>
+          If you are inquiring about Legends and Legacies, please select the 'Legends and Legacies'
+          option in the Project Type dropdown and let us know how we can best assist you with your
+          issue or question!
+        </CursorSpotlightText>
       </div>
       <CursorSpotlightCard>
         <div className='w-full h-full'>
@@ -98,6 +103,7 @@ export default function Contact() {
                 <option value='Backend Development'>Backend Development</option>
                 <option value='Mobile Development'>Mobile Development</option>
                 <option value='Consulting'>Consulting</option>
+                <option value='Legends and Legacies'>Legends and Legacies</option>
                 <option value='Other'>Other (Specify Below)</option>
               </select>
             </div>
